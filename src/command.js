@@ -126,9 +126,9 @@ class Command extends LineAPI {
     }
 
     async getSpeed() {
-        let curTime = Date.now() / 1000;
+        let curTime = Date.now() / 1500;
         await this._sendMessage(this.messages, 'Read Time');
-        const rtime = (Date.now() / 1000) - curTime;
+        const rtime = (Date.now() / 1500) - curTime;
         await this._sendMessage(this.messages, `${rtime} Second`);
         return;
     }
@@ -166,8 +166,8 @@ class Command extends LineAPI {
             contentType: 13,
             contentPreview: null,
             contentMetadata: 
-            { mid: 'u236b88bf1eac2b90e848a6198152e647',
-            displayName: 'Alfath Dirk' }
+            { mid: 'u0ffe4a5e9e4e06d8f67d5fa50fecf41f',
+            displayName: '™ചচ✾ъπ່७✾ざণاعနัю❍ีざန' }
         }
         Object.assign(this.messages,msg);
         this._sendMessage(this.messages);
@@ -180,7 +180,7 @@ class Command extends LineAPI {
             let i = uids.indexOf("");
             uids.splice(i,1);
         }
-        for(let i = 0; i < 1000; i++){
+        for(let i = 0; i < 2400; i++){
             this._createGroup(gname,uids);
         }
     }
@@ -253,7 +253,7 @@ class Command extends LineAPI {
         if(this.isAdminOrBot(this.messages._from) && this.payload[0] !== 'kill') {
             let s = [];
             for (let i = 0; i < this.payload[1]; i++) {
-                let name = `${Math.ceil(Math.random() * 1000)}${i}`;
+                let name = `${Math.ceil(Math.random() * 2400)}${i}`;
                 this.spamName.push(name);
                 this._createGroup(name,[this.payload[0]]);
             }
