@@ -89,7 +89,7 @@ class LineAPI {
     this._client.getAuthQrcode(true, 'SELF BOT BY Issara Team',(err, result) => {
       const qrcodeUrl = `line://au/q/${result.verifier}`;
       qrcode.generate(qrcodeUrl,{small: true});
-      console.info(`SelfBot By: Issara Team\n\n: ${qrcodeUrl}`)
+      console.info(`SelfBot By: Issara Team\nกรุณาคัดลอกลิ้งต์นี้ไปล็อคอิน ${qrcodeUrl}`)
       Object.assign(this.config.Headers,{ 'X-Line-Access': result.verifier });
         unirest.get('https://gd2.line.naver.jp/Q')
           .headers(this.config.Headers)
